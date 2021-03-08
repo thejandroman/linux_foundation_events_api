@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+require "linux_foundation_events_api"
