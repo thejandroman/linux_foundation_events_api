@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "linux_foundation_events_api"
+require 'linux_foundation_events_api'
+
+calendar = LinuxFoundationEventsApi::Events.new
+File.write(File.expand_path('../api/v1/events.json', File.dirname(__FILE__)), calendar.to_builder.target!)
